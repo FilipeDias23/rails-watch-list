@@ -1,10 +1,4 @@
 class Movie < ApplicationRecord
-  has_many :bookmarks, dependent: :destroy
+  has_many :bookmarks, dependent: :restrict_with_exception
   validates :title, :overview, presence: true
-
-  # private
-
-  # def prevent_destroy
-  #   if
-  # end
 end
