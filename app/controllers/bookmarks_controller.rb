@@ -1,7 +1,4 @@
 class BookmarksController < ApplicationController
-  def show
-
-  end
 
   def create
 
@@ -11,7 +8,7 @@ class BookmarksController < ApplicationController
 
   end
 
-  def delete
+  def destroy
 
   end
 end

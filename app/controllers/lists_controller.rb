@@ -11,8 +11,12 @@ class ListsController < ApplicationController
   end
 
   def create
-    @list = List.create(task_params)
+    @list = List.new(task_params)
+    if @list.save
     redirect_to list_path(List.last)
+    else
+      render :new
+    end
   end
 
   def task_params
